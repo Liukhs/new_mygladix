@@ -1,0 +1,156 @@
+.preventivo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 22px;
+
+    & label{
+        font-size: 0.85rem;
+        color: #cfc9e8;
+        font-weight: 600;
+    }
+    & input, select, textarea{
+        width: 100%;
+        background: rgba(4, 1, 13, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 16px 22px;
+        border-radius: 14px;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+    }
+    & .checkbox{
+        width: auto;
+    }
+
+    & .button-invia{
+        font-size: 15px;
+        color: #fff;
+        background: $mx-primary-gradient;
+        padding: 16px;
+        border-radius: 12px;
+        cursor: pointer;
+        border: none;
+        margin-top: 10px;
+        max-width: 310px;
+
+    }
+    &--container{
+        background-color: #fff; 
+        border-radius: 18px; 
+        padding: $mx-pd-section-2_2; 
+        margin-top: 10px; 
+        width: 100%; 
+        max-width: 500px; 
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+
+        & h1{
+            font-size: 20px !important;
+        }
+    }
+}
+.wrapper-form-preventivo{
+    max-width: 1400px;
+    width: 100%;
+    border: 1px solid rgba(121, 30, 255, 0.2);
+    border-radius: 40px;
+    padding: 55px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+}
+.form-preventivo-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.grid-internal{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contatto{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 35px;
+
+    & label{
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #cfc9e8;
+    }
+    
+    & input, textarea{
+        background: rgba(4, 1, 13, 0.6);
+        border: 1px solid rgba($color: #fff, $alpha: 0.08);
+        padding: 16px 22px;
+        border-radius: 14px;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        max-width: 70%;
+
+    }
+}
+.wrapper-contatto{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+.checkbox-container{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.82rem;
+    color: #7e769e;
+    line-height: 1.4;
+    cursor: pointer;
+}
+.button-form{
+    font-size: 15px;
+    color: #fff;
+    background: $mx-primary-gradient;
+    padding: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    max-width: 250px;   
+
+}
+.segmented-selector{
+    display: flex;
+    background: rgba(4, 1, 13, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6px;
+    border-radius: 14px;
+    gap: 4px;
+}
+.selector-button{
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: $text-muted;
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    &.active{
+        background: #791eff;
+        color: #fff;
+        box-shadow: 0 4px 15px rgba(121, 30, 255, 0.3);
+    }
+}
+
+.grid-internal input:focus,
+.grid-internal select:focus,
+.preventivo textarea:focus{
+    border-color: #00f0ff !important;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.2) !important;
+    outline: none !important;
+}

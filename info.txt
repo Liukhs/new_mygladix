@@ -1,0 +1,7 @@
+Titoli:
+    - hero : 32 -> 64px 5vw+1rem;
+    - sezione : 28 -> 40 px 3vw + 0.5rem;
+    - card : 20 -> 24px 2vw + 0.25rem;
+Paragrafi:
+    - hero : 28 -> 40 px 3vw + 0.5rem;
+    - sezione : 16 -> 24 px 

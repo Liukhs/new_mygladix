@@ -1,0 +1,23 @@
+📁 css/
+├── 📄 main.css (Il file che compila/importa tutto)
+│
+├── 📁 1-settings/ (Solo variabili, nessun CSS reale)
+│   ├── _colors.css    (:root { --primary: #0055ff; --text: #333; })
+│   └── _spacing.css   (:root { --space-sm: 8px; --space-md: 16px; })
+│
+├── 📁 2-base/     (Stili per i tag HTML grezzi, senza classi)
+│   ├── _reset.css     (Azzera i margini del browser, box-sizing: border-box)
+│   └── _elements.css  (Stili base per <h1>, <p>, <a>, <body>)
+│
+├── 📁 3-layout/   (Macrostutture che contengono le cose)
+│   ├── _grid.css      (Le tue classi per flexbox o CSS grid)
+│   ├── _header.css    (La navbar globale)
+│   └── _footer.css
+│
+├── 📁 4-components/ (I "mattoncini" riutilizzabili. Il 80% del tuo codice andrà qui)
+│   ├── _buttons.css   (.btn, .btn-primary)
+│   ├── _cards.css     (.card, .card-image, .card-body)
+│   └── _forms.css     (.input-group, .checkbox)
+│
+└── 📁 5-utilities/  (Classi di emergenza che vincono su tutto)
+    └── _helpers.css   (.text-center, .mt-2, .d-none)

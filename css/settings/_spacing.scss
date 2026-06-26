@@ -1,0 +1,23 @@
+$pd-section: 20px 15%;
+$pd-card-lg: 30px;
+$pd-card-section: 56px;
+$pd-grid-card: 20px;
+$pd-small: 8px;
+$pd-card-xl: 30px 20px 20px 20px;
+$gap: 20px;
+$pd-btn: 12px 20px;
+$pd-btn-xs: 7px 15px;
+$pd-section-small: 20px 10%;
+$mx-pd-section-4_3: 80px 60px;
+$mx-pd-section-2_2: 40px;
+:root{
+    --pd-carousel: 80px 10%;
+    
+}
+:root{
+    @media (max-width: 576px) {
+        --pd-carousel: 5px 2%;
+        $pd-section: 5px 2%;
+        
+    }
+}

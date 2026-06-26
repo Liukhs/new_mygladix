@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="/js/GSAP/gsap.min.js"></script>
+        <script src="/js/GSAP/ScrollTrigger.min.js"></script>
+        <script type="module" src="js/main.js"></script>
+        <title>PREVENTIVO</title>
+    </head>
+    <body>
+        <header class="header header--pre-scroll">
+            <div class="sct sct--row sct--jc sct--ac">
+                <div class="header--row sct--js">
+                    <img src="images/logo sfondo nero.svg" alt="logo mgx" class="header--logo">
+                    <div class="header--menu header--row--menu">
+                        <ul>
+                            <li><a href="prova.html">Home</a></li>
+                            <li><a href="Agenzia.html">Chi siamo</a></li>
+                            <li>
+                                Servizi
+                                <div class="dropdown"></div>
+                            </li>
+                            <li>Blog</li>
+                            <li>contatti</li>
+                            <li class="highlighted"><a href="preventivo.html">Preventivo</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex sct-jc sct-ac header--icon-container">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="sct sct--ac sct--js sct--pd-section-4_3">
+            <h1 class="title title--section font-syfe text-align__center boldest-font">
+                Configura il tuo preventivo
+            </h1>
+            <p class="subtitle subtitle--section">
+                Compila i dati strutturati per ricevere un offerta calibrata sui tuoi obbiettivi finanziari ed operativi.
+            </p>
+            <div class="wrapper-form-preventivo">
+                <form action="" class="preventivo">
+                    <div class="form-preventivo-grid">
+                        <div class="grid-internal">
+                            <label for="">Classificazione Cliente*</label>
+                            <div class="segmented-selector">
+                                <button class="selector-button active">Azienda</button>
+                                <button class="selector-button">Privati</button>
+                            </div>
+                        </div>
+                        <div class="grid-internal">
+                            <label for="">Ragione sociale(Se applicabile)</label>
+                            <input type="text" placeholder="Nome Azienda S.r.l.">
+                        </div>
+                    </div>
+                    <div class="form-preventivo-grid">
+                        <div class="grid-internal">
+                            <label for="">Nome e Cognome Referente*</label>
+                            <input type="text" placeholder="Mario Rossi" required>
+                        </div>
+                        <div class="grid-internal">
+                            <label for="">Partita IVA/Codice Fiscale*</label>
+                            <input type="text" placeholder="03683370989" required>
+                        </div>
+                    </div>
+                    <div class="form-preventivo-grid">
+                        <div class="grid-internal">
+                            <label for="">Indirizzo Email Aziendale*</label>
+                            <input type="text" placeholder="direzione@azienda.it" required>
+                        </div>
+                        <div class="grid-internal">
+                            <label for="">Telefono Principale*</label>
+                            <input type="text" placeholder="+39 030 938..." required>
+                        </div>
+                    </div>
+                    <div class="form-preventivo-grid">
+                        <div class="grid-internal">
+                            <label for="">Telefono Secondario(Reperibilità)</label>
+                            <input type="text" placeholder="Contatto alternativo"></input>
+                        </div>
+                        <div class="grid-internal">
+                            <label for="">Fascia di Budget Allocata*</label>
+                            <div class="segmented-selector">
+                                <button class="selector-button">Under 5K</button>
+                                <button class="selector-button active">5K - 15K</button>
+                                <button class="selector-button">Oltre 15K</button>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="">Descrizione del Progetto e Business Unit Interessate*</label>
+                    <textarea placeholder="Specifica le necessità operative"></textarea>
+                    <div class="checkbox-container">
+                        <input type="checkbox" required class="checkbox">
+                        <span>Accetto il trattamento dei dati personali ai fini del contatto immediato.</span>
+                    </div>
+                    <button class="button-invia">Invia Richiesta</button>
+                </form>  
+            </div>
+        </section>
+    </body>
+</html>
