@@ -2,12 +2,12 @@ let stage;
 let cardsEl = [];
 let TOTAL = 0;
 let STAGE_W = 0;
-const VISIBLE = 7;
-const ARC_RADIUS = 1500;
+let VISIBLE = 7;
+let ARC_RADIUS = 1500;
 
-const BASE_Y = 80; // coordinata y della card centrale dal top dello stage
-const CARD_W = 350; // larghezza delle card
-const ARC_SPREAD = 60;
+let BASE_Y = 80; // coordinata y della card centrale dal top dello stage
+let CARD_W = 350; // larghezza delle card
+let ARC_SPREAD = 60;
 let current = 0;
 let animating = false;
 
@@ -19,6 +19,25 @@ export function initArcCarousel(){
     if (!root || !stage || TOTAL === 0) return;
 
     STAGE_W = root.getBoundingClientRect().width;
+    if(STAGE_W <= 768){
+      VISIBLE = 3;
+      CARD_W = STAGE_W * 0.75;
+      ARC_RADIUS = STAGE_W * 1.5;
+      ARC_SPREAD = 45;
+      BASE_Y = 40
+    }else if(STAGE_W < 1200){
+        VISIBLE = 5;
+        CARD_W = 300;
+        ARC_RADIUS = 1100;
+        ARC_SPREAD = 55;
+        BASE_Y = 60;
+    }else{
+        VISIBLE = 7;
+        CARD_W = 350;
+        ARC_RADIUS = 1500;
+        ARC_SPREAD = 60;
+        BASE_Y = 80;
+    }
     const prevBtn = document.getElementById("prevBtn");
     if (prevBtn) prevBtn.addEventListener("click", () => navigate(-1));
     const nextBtn = document.getElementById("nextBtn");
@@ -76,6 +95,7 @@ function getSlotConfig(relPos) {
 
 function render() {
   cardsEl.forEach((el, i) => {
+    el.style.width = CARD_W + "px";
     const rel = getRelativePos(i);
     const cfg = getSlotConfig(rel);
 

@@ -24,11 +24,17 @@
         font-size: 4rem;
         font-weight: 800;
         color: #fff;
+        @media (max-width: 900px) {
+            font-size: clamp(1.3rem, 5vw, 2.5rem);
+        }
     }
 
     &--section{
         font-size: 3.2rem;
         font-weight: $mx-bold;
+        @media (max-width: 900px) {
+            font-size: clamp(1.2rem, 3.5vw, 1.7rem);
+        }
     }
 
     &--card{
@@ -85,6 +91,12 @@
     font-family: 'Syne', sans-serif;
     margin: 0;
     padding: 0; 
+    
+    @media (max-width: 768px) {
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+        text-align: center;    
+    }
 }
 .contact-card-title{
     margin-bottom: 6px;
@@ -342,6 +354,23 @@
             color: #fff;
             font-weight: 600;
         }
+    }
+}
+.centered-text{
+    text-align: center; 
+    padding: 0 25%;
+
+    @media (max-width: 768px) {
+        padding: 0 5%;
+        
+    }
+}
+.row-contatti{
+    gap: 70px;
+
+    @media (max-width: 768px) {
+        gap: 20px;
+        
     }
 }
 

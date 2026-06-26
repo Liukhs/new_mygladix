@@ -61,7 +61,7 @@ export function gTlAnim(array){
         trigger: sezione,
         start: "top center",
         end: "bottom top",
-        markers: true,
+        markers: false,
         toggleActions: "play reset play reset"
       },
       opacity: 0,

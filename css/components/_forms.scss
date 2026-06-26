@@ -19,6 +19,11 @@
         font-family: 'Inter', sans-serif;
         font-size: 0.95rem;
     }
+    & input:focus, select:focus, textarea:focus{
+        border-color: #00f0ff !important;
+        box-shadow: 0 0 15px rgba(0, 240, 255, 0.2) !important;
+        outline: none !important;
+    }
     & .checkbox{
         width: auto;
     }
@@ -90,6 +95,10 @@
         font-family: 'Inter', sans-serif;
         font-size: 0.95rem;
         max-width: 70%;
+        @media (max-width: 900px) {
+            max-width: 100%;
+            
+        }
 
     }
 }

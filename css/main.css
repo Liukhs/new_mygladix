@@ -52,9 +52,19 @@ html, body {
   font-weight: 800;
   color: #fff;
 }
+@media (max-width: 900px) {
+  .title--hero {
+    font-size: clamp(1.3rem, 5vw, 2.5rem);
+  }
+}
 .title--section {
   font-size: 3.2rem;
   font-weight: 600;
+}
+@media (max-width: 900px) {
+  .title--section {
+    font-size: clamp(1.2rem, 3.5vw, 1.7rem);
+  }
 }
 .title--card {
   font-size: 1.1rem;
@@ -102,6 +112,13 @@ html, body {
   font-family: "Syne", sans-serif;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 768px) {
+  .hero-motto {
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
 
 .contact-card-title {
@@ -382,6 +399,25 @@ html, body {
   font-weight: 600;
 }
 
+.centered-text {
+  text-align: center;
+  padding: 0 25%;
+}
+@media (max-width: 768px) {
+  .centered-text {
+    padding: 0 5%;
+  }
+}
+
+.row-contatti {
+  gap: 70px;
+}
+@media (max-width: 768px) {
+  .row-contatti {
+    gap: 20px;
+  }
+}
+
 .animation--right-in {
   transform: translateX(50px);
   opacity: 0;
@@ -639,7 +675,7 @@ html, body {
 @media (max-width: 900px) {
   .sct--all {
     width: 100vw;
-    height: auto !important;
+    height: 100vh !important;
   }
 }
 .sct--all-bg {
@@ -656,6 +692,11 @@ html, body {
 }
 .sct--pd {
   padding: 20px 15%;
+}
+@media (max-width: 768px) {
+  .sct--pd {
+    padding: 20px 5%;
+  }
 }
 .sct--pd-small {
   padding: 20px 10%;
@@ -686,6 +727,11 @@ html, body {
 }
 .sct--ae {
   align-items: flex-end;
+}
+@media (max-width: 900px) {
+  .sct--ae {
+    align-items: center;
+  }
 }
 .sct--astr {
   align-items: stretch;
@@ -746,7 +792,12 @@ html, body {
   width: 75%;
 }
 .flex-paragraph--semi {
-  width: 50% !important;
+  width: 50%;
+}
+@media (max-width: 900px) {
+  .flex-paragraph--semi {
+    width: 100%;
+  }
 }
 .flex-paragraph--all-height {
   height: auto;
@@ -757,17 +808,13 @@ html, body {
 }
 @media (max-width: 900px) {
   .flex-paragraph--custom {
+    --width-custom: 100% !important;
     width: 100% !important;
   }
 }
 .flex-paragraph--row {
   flex-direction: row;
   flex-wrap: wrap;
-}
-@media (max-width: 576px) {
-  .flex-paragraph--semi {
-    width: 100%;
-  }
 }
 
 .moving-text {
@@ -806,6 +853,15 @@ html, body {
 .gradient-border {
   border: 4px solid transparent !important;
   background: linear-gradient(white, white) padding-box, linear-gradient(135deg, #0057FF, #8B00FF, #E100FF) border-box;
+}
+
+@media (max-width: 900px) {
+  .row-mobile {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
 }
 
 .carousel {
@@ -861,10 +917,16 @@ html, body {
 .arc--carousel-root__stage {
   position: relative;
   width: 100%;
-  height: 850px;
+  height: 100vh;
+  max-height: 850px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .arc--carousel-root__stage {
+    max-height: 500px;
+  }
 }
 
 .ctrl--button {
@@ -919,10 +981,40 @@ html, body {
   top: 30%;
   left: 35%;
 }
+@media (max-width: 768px) {
+  .ctrl--button.previous {
+    left: 2%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ctrl--button.previous {
+    left: 25%;
+  }
+}
+@media (min-width: 1025) and (max-width: 1440px) {
+  .ctrl--button.previous {
+    left: 30%;
+  }
+}
 .ctrl--button.next {
   top: 30%;
   right: 35%;
   position: absolute;
+}
+@media (max-width: 768px) {
+  .ctrl--button.next {
+    right: 2%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ctrl--button.next {
+    right: 25%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .ctrl--button.next {
+    right: 30%;
+  }
 }
 
 .header {
@@ -1180,7 +1272,8 @@ html, body {
   flex: 0 0 calc(33% - 20px);
 }
 .card--ctwoo {
-  flex: 0 0 calc(50% - 20px);
+  flex: 1 0 calc(50% - 20px);
+  min-width: 200px;
 }
 .card--gap {
   gap: 8px;
@@ -1301,13 +1394,18 @@ html, body {
   justify-content: flex-start;
   gap: 10px;
   cursor: pointer;
-  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1), top 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease, box-shadow 0.4s ease;
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1), top 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease, box-shadow 0.4s ease, border 0.6s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   transform-origin: center bottom;
   will-change: transform, left, top;
   opacity: 0.2;
+}
+@media (max-width: 768px) {
+  .arc--cards {
+    opacity: 0;
+  }
 }
 .arc--cards.active {
   opacity: 1;
@@ -1375,7 +1473,6 @@ html, body {
   justify-content: space-between;
   max-width: 410px;
   min-height: 200px;
-  transition: transform 0.3s ease, border 0.3s ease;
 }
 .news--card .news--info {
   font-size: 0.8rem;
@@ -1392,6 +1489,11 @@ html, body {
 .news--card .news--author {
   font-size: 0.85rem;
   color: #7e769e;
+}
+
+.card-contatti {
+  max-width: 500px;
+  width: 100%;
 }
 
 .preventivo {
@@ -1414,6 +1516,11 @@ html, body {
   color: #fff;
   font-family: "Inter", sans-serif;
   font-size: 0.95rem;
+}
+.preventivo input:focus, .preventivo select:focus, .preventivo textarea:focus {
+  border-color: #00f0ff !important;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2) !important;
+  outline: none !important;
 }
 .preventivo .checkbox {
   width: auto;
@@ -1485,6 +1592,11 @@ html, body {
   font-family: "Inter", sans-serif;
   font-size: 0.95rem;
   max-width: 70%;
+}
+@media (max-width: 900px) {
+  .contatto input, .contatto textarea {
+    max-width: 100%;
+  }
 }
 
 .wrapper-contatto {

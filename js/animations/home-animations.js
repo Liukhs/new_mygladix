@@ -8,6 +8,8 @@ let sezioni = gsap.utils.toArray("#sezione");
 
 export function initHomeAnimations(){
 
+    console.log(sezioni.length)
+
     gTlAnim(sezioni);
     
     
