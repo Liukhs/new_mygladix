@@ -12,12 +12,15 @@ $mx-pd-section-4_3: 80px 60px;
 $mx-pd-section-2_2: 40px;
 :root{
     --pd-carousel: 80px 10%;
+    --pd-section-small: 20px 10%;
+    --accent-color: rgba(0, 240, 255, 0.1);
     
 }
 :root{
     @media (max-width: 576px) {
         --pd-carousel: 5px 2%;
         $pd-section: 5px 2%;
+        --pd-section-small: 10px 2%;
         
     }
 }

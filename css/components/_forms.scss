@@ -126,7 +126,17 @@
     cursor: pointer;
     border: none;
     margin-top: 10px;
-    max-width: 250px;   
+    max-width: 250px;
+    &__accent-blue{
+        background: $mx-accent-lightblue;
+        color: #000;
+    } 
+    &.glow{
+        box-shadow: 0 4px 20px rgba(147, 51, 234, 0.5);        
+    } 
+    &--big{
+        font-size: 20px;
+    } 
 
 }
 .segmented-selector{

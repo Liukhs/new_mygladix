@@ -1,10 +1,13 @@
 :root {
   --pd-carousel: 80px 10%;
+  --pd-section-small: 20px 10%;
+  --accent-color: rgba(0, 240, 255, 0.1);
 }
 
 @media (max-width: 576px) {
   :root {
     --pd-carousel: 5px 2%;
+    --pd-section-small: 10px 2%;
   }
 }
 
@@ -45,6 +48,11 @@ html, body {
 
 .boldest-font {
   font-weight: 800 !important;
+}
+
+.text-lblue {
+  color: #00f0ff;
+  font-weight: 600 !important;
 }
 
 .title--hero {
@@ -203,10 +211,29 @@ html, body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.gradient-text__lightblue {
+  background: linear-gradient(135deg, #fff 0%, #00f0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .center-text {
   text-align: center;
   padding: 0 25%;
+}
+
+.product-by-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: rgba(12, 12, 12, 0.25);
+  border: 1px solid #00f0ff;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 6px;
+  margin-bottom: 20px;
+  color: #00f0ff;
 }
 
 .icon-container {
@@ -416,6 +443,14 @@ html, body {
   .row-contatti {
     gap: 20px;
   }
+}
+
+.protego-banner {
+  background: radial-gradient(circle at center, rgba(0, 240, 255, 0.05) 0%, transparent 70%);
+}
+
+.body-image {
+  background-image: radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 60%, rgba(0, 240, 255, 0.08) 0%, transparent 50%);
 }
 
 .animation--right-in {
@@ -699,7 +734,7 @@ html, body {
   }
 }
 .sct--pd-small {
-  padding: 20px 10%;
+  padding: var(--pd-section-small);
 }
 .sct--pd-custom {
   padding: var(--pd-custom);
@@ -709,6 +744,9 @@ html, body {
 }
 .sct--pd-section-2_2 {
   padding: 40px;
+}
+.sct--pd-inner {
+  padding: 0 60px;
 }
 .sct--js {
   justify-content: flex-start;
@@ -986,7 +1024,7 @@ html, body {
     left: 2%;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .ctrl--button.previous {
     left: 25%;
   }
@@ -1006,7 +1044,7 @@ html, body {
     right: 2%;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .ctrl--button.next {
     right: 25%;
   }
@@ -1106,7 +1144,9 @@ html, body {
   color: #fff;
 }
 .header--menu li:hover .dropdown {
-  height: 100px;
+  height: 150px;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
   opacity: 1;
 }
 .header--menu li a {
@@ -1129,6 +1169,23 @@ html, body {
   background: rgb(4, 1, 13);
   border: 1px solid rgba(121, 30, 255, 0.3);
   border-top: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.dropdown ul {
+  display: flex;
+  margin: 0;
+  padding: 20px;
+  max-width: 100%;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.dropdown ulli {
+  padding: 4px 12px;
 }
 
 .footer {
@@ -1177,6 +1234,13 @@ html, body {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.03);
   background: #0c0721;
+}
+.card.purple-hover {
+  transition: all 0.3s ease;
+}
+.card:hover.purple-hover {
+  border-color: #9333ea;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.2) 0%, transparent 100%);
 }
 .card--pd {
   padding: 30px;
@@ -1303,13 +1367,16 @@ html, body {
 .card--icon {
   background: var(--accent-color);
   border-radius: var(--border-radius, 10px);
-  color: #fff;
+  color: #00f0ff;
   width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 25px;
+}
+.card--icon--margin {
+  margin-bottom: 12px;
 }
 .card__big {
   padding: 30px 20px 20px 20px;
@@ -1496,6 +1563,21 @@ html, body {
   width: 100%;
 }
 
+.card-wide {
+  display: flex;
+  width: 100%;
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  padding: 15px 25px;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(20, 17, 34, 0.6);
+}
+.card-wide.active {
+  border-color: #9333ea;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.2) 0%, transparent 100%);
+}
+
 .preventivo {
   display: flex;
   flex-direction: column;
@@ -1626,6 +1708,16 @@ html, body {
   border: none;
   margin-top: 10px;
   max-width: 250px;
+}
+.button-form__accent-blue {
+  background: #00f0ff;
+  color: #000;
+}
+.button-form.glow {
+  box-shadow: 0 4px 20px rgba(147, 51, 234, 0.5);
+}
+.button-form--big {
+  font-size: 20px;
 }
 
 .segmented-selector {
