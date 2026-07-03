@@ -372,6 +372,37 @@ $card-variants: (
     z-index: 1;
     text-align: center;
    }
+   
+}
+.border-card{
+    border-top: 3px solid;
+    transition: border .3s ease;
+    &__grey{
+        border-top-color: grey;
+
+        &:hover{
+            border: 1px solid;
+            border-top: 5px solid;
+            border-color: grey;
+        }
+    }
+    &__blue{
+        border-top-color: blue;
+        &:hover{
+            border: 1px solid;
+            border-top: 5px solid;
+            border-color: blue;
+        }
+    }
+    &__green{
+        border-top-color: green;
+        &:hover{
+            border: 1px solid;
+            border-top: 5px solid;
+            border-color: green;
+        }
+    }
+    
 }
 
 

@@ -584,7 +584,77 @@
 
 }
 
- 
+.first-animation-column{
+        animation: firstToActive .5s ease-in forwards;
+
+}
+.second-animation-column{
+        animation: secondToFirst .5s ease-in forwards;
+}
+.third-animation-column{
+        animation: thirdToSecond .5s ease-in forwards;
+}
+.fourth-animation-column{
+        animation: fourthToThird .5s ease-in forwards;
+}
+.active-to-column{
+        animation: activeToFourth .5s ease-in forwards;
+}
+@keyframes firstToActive {
+        from{
+                top: 0;
+                left: 0;
+        }
+        to{
+                width: 966px;
+                height: 500px;
+                left: -986px;
+                top: 0;
+        }
+        
+}
+@keyframes secondToFirst{
+        from{
+                left: 0;
+                top: 25%
+        }
+        to{
+                left: 0;
+                top: 0;
+        }
+}
+@keyframes thirdToSecond {
+        from{
+                left: 0;
+                top: 50%;
+        }
+        to{
+                left: 0;
+                top: 25%
+        }
+}
+@keyframes fourthToThird {
+        from{
+                left: 0;
+                top: 75%;
+        }
+        to{
+                left: 0;
+                top: 50%;
+        }
+}
+@keyframes activeToFourth{
+        from{
+                top: 0;
+                left: 0;
+        }
+        to{
+                left: 986px;
+                top: 75%;
+                width: 414px;
+                height: 120px;
+        }
+}
 
 
 

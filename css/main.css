@@ -513,6 +513,53 @@ html, body {
   margin-bottom: 0 !important;
 }
 
+.big-card-protego {
+  display: none;
+}
+.big-card-protego.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.small-card-protego {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 24%;
+  background-color: green;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 30px;
+}
+.small-card-protego.first {
+  top: 0;
+}
+.small-card-protego.second {
+  top: 25%;
+}
+.small-card-protego.third {
+  top: 50%;
+}
+.small-card-protego.fourth {
+  top: 75%;
+}
+.small-card-protego.invisible {
+  display: none;
+}
+
 .animation--right-in {
   transform: translateX(50px);
   opacity: 0;
@@ -754,6 +801,80 @@ html, body {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+.first-animation-column {
+  animation: firstToActive 0.5s ease-in forwards;
+}
+
+.second-animation-column {
+  animation: secondToFirst 0.5s ease-in forwards;
+}
+
+.third-animation-column {
+  animation: thirdToSecond 0.5s ease-in forwards;
+}
+
+.fourth-animation-column {
+  animation: fourthToThird 0.5s ease-in forwards;
+}
+
+.active-to-column {
+  animation: activeToFourth 0.5s ease-in forwards;
+}
+
+@keyframes firstToActive {
+  from {
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: 966px;
+    height: 500px;
+    left: -986px;
+    top: 0;
+  }
+}
+@keyframes secondToFirst {
+  from {
+    left: 0;
+    top: 25%;
+  }
+  to {
+    left: 0;
+    top: 0;
+  }
+}
+@keyframes thirdToSecond {
+  from {
+    left: 0;
+    top: 50%;
+  }
+  to {
+    left: 0;
+    top: 25%;
+  }
+}
+@keyframes fourthToThird {
+  from {
+    left: 0;
+    top: 75%;
+  }
+  to {
+    left: 0;
+    top: 50%;
+  }
+}
+@keyframes activeToFourth {
+  from {
+    top: 0;
+    left: 0;
+  }
+  to {
+    left: 986px;
+    top: 75%;
+    width: 414px;
+    height: 120px;
   }
 }
 .sct {
@@ -1681,6 +1802,35 @@ html, body {
   justify-content: center;
   z-index: 1;
   text-align: center;
+}
+
+.border-card {
+  border-top: 3px solid;
+  transition: border 0.3s ease;
+}
+.border-card__grey {
+  border-top-color: grey;
+}
+.border-card__grey:hover {
+  border: 1px solid;
+  border-top: 5px solid;
+  border-color: grey;
+}
+.border-card__blue {
+  border-top-color: blue;
+}
+.border-card__blue:hover {
+  border: 1px solid;
+  border-top: 5px solid;
+  border-color: blue;
+}
+.border-card__green {
+  border-top-color: green;
+}
+.border-card__green:hover {
+  border: 1px solid;
+  border-top: 5px solid;
+  border-color: green;
 }
 
 .preventivo {
