@@ -1,22 +1,22 @@
 const bigCards = document.querySelectorAll('.big-card-protego');
 const colCards = document.querySelectorAll('.small-card-protego');
+let firstCard = null;
+let secondCard = null;
+let thirdCard = null;
+let fourthCard = null;
+let invisibleCard = null;
 
 export function protegoCarousel(){
     let activeCard = null;
 
     colCards.forEach(card => {
-        let firstCard = Array.from(colCards).find(carde => carde.classList.contains('first'));
-        let secondCard = Array.from(colCards).find(carde => carde.classList.contains('second'));
-        let thirdCard = Array.from(colCards).find(carde => carde.classList.contains('third'));
-        let fourthCard = Array.from(colCards).find(carde => carde.classList.contains('fourth'));
-        let invisibleCard = Array.from(colCards).find(carde => carde.classList.contains('invisible'));
+        
         card.addEventListener('click', () => {
+            cercaCards();
             activeCard = Array.from(bigCards).find(carde => carde.classList.contains('active'));
-            card.classList.add('first-animation-column');
-            secondCard.classList.add('second-animation-column');
-            thirdCard.classList.add('third-animation-column');
-            fourthCard.classList.add('fourth-animation-column');
-            activeCard.classList.add('active-to-column')
+            initCardAnimations();
+            activeCard.classList.add('active-to-column');
+            
 
             setTimeout(() =>{ 
                 bigCards.forEach(bCard =>{
@@ -33,6 +33,13 @@ export function protegoCarousel(){
                         thirdCard.classList.add('second');
                         fourthCard.classList.remove('fourth');
                         fourthCard.classList.add('third');
+                        card.classList.remove('first-animation-column');
+                        secondCard.classList.remove('second-animation-column');
+                        thirdCard.classList.remove('third-animation-column');
+                        fourthCard.classList.remove('fourth-animation-column');
+                        activeCard.classList.remove('active-to-column');
+
+                        resetData();
                     }
                 })
             }, 500);
@@ -41,9 +48,50 @@ export function protegoCarousel(){
 }
 
 function cercaCards(){
-    let firstCard = Array.from(colCards).find(carde => carde.classList.contains('first'));
-    let secondCard = Array.from(colCards).find(carde => carde.classList.contains('second'));
-    let thirdCard = Array.from(colCards).find(carde => carde.classList.contains('third'));
-    let fourthCard = Array.from(colCards).find(carde => carde.classList.contains('fourth'));
-    let invisibleCard = Array.from(colCards).find(carde => carde.classList.contains('invisible'));
+    firstCard = Array.from(colCards).find(carde => carde.dataset.posizione === 'first');
+    secondCard = Array.from(colCards).find(carde => carde.dataset.posizione === 'second');
+    thirdCard = Array.from(colCards).find(carde => carde.dataset.posizione === 'third');
+    fourthCard = Array.from(colCards).find(carde => carde.dataset.posizione === 'fourth');
+    invisibleCard = Array.from(colCards).find(carde => carde.dataset.posizione === 'invisible');
+}
+
+function resetData(){
+    colCards.forEach(card => {
+        switch(card.dataset.posizione){
+            case 'first':
+                card.dataset.posizione = 'invisible';
+                break;
+            case 'second':
+                card.dataset.posizione = 'first';
+                break;
+            case 'third':
+                card.dataset.posizione = 'second';
+                break;
+            case 'fourth':
+                card.dataset.posizione = 'third';
+                break;
+            case 'invisible':
+                card.dataset.posizione = 'fourth';
+                break;
+        }   
+    })
+
+}
+function initCardAnimations(){
+    colCards.forEach(card => {
+        switch(card.dataset.posizione){
+            case 'first':
+                card.classList.add('first-animation-column');
+                break;
+            case 'second':
+                card.classList.add('second-animation-column');
+                break;
+            case 'third':
+                card.classList.add('third-animation-column');
+                break;
+            case 'fourth':
+                card.classList.add('fourth-animation-column');
+                break;
+        }  
+    })
 }
