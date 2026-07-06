@@ -5,54 +5,30 @@ let secondCard = null;
 let thirdCard = null;
 let fourthCard = null;
 let invisibleCard = null;
+let activeCard = null;
+let cardArray = [];
+const aspettaAnimazione = () => new Promise(resolve => setTimeout(resolve, 500));
 
 export function protegoCarousel(){
-    let activeCard = null;
 
     colCards.forEach(card => {
         
         card.addEventListener('click', () => {
-            cercaCards();
-            activeCard = Array.from(bigCards).find(carde => carde.classList.contains('active'));
-            initCardAnimations();
-            activeCard.classList.add('active-to-column');
-            
-
-            setTimeout(() =>{ 
-                bigCards.forEach(bCard =>{
-                    if(bCard.dataset.card === card.dataset.card){
-                        invisibleCard.classList.remove('invisible');
-                        invisibleCard.classList.add('fourth');
-                        activeCard.classList.remove('active');
-                        bCard.classList.add('active');
-                        card.classList.remove('first');
-                        card.classList.add('invisible');
-                        secondCard.classList.remove('second')
-                        secondCard.classList.add('first');
-                        thirdCard.classList.remove('third');
-                        thirdCard.classList.add('second');
-                        fourthCard.classList.remove('fourth');
-                        fourthCard.classList.add('third');
-                        card.classList.remove('first-animation-column');
-                        secondCard.classList.remove('second-animation-column');
-                        thirdCard.classList.remove('third-animation-column');
-                        fourthCard.classList.remove('fourth-animation-column');
-                        activeCard.classList.remove('active-to-column');
-
-                        resetData();
-                    }
-                })
-            }, 500);
+            console.log("Carta cliccata");
+            controlCardNumber(cardNumber(card));
         })
     })
 }
 
 function cercaCards(){
+    cardArray.length = 0;
     firstCard = Array.from(colCards).find(carde => carde.dataset.posizione === 'first');
     secondCard = Array.from(colCards).find(carde => carde.dataset.posizione === 'second');
     thirdCard = Array.from(colCards).find(carde => carde.dataset.posizione === 'third');
     fourthCard = Array.from(colCards).find(carde => carde.dataset.posizione === 'fourth');
     invisibleCard = Array.from(colCards).find(carde => carde.dataset.posizione === 'invisible');
+    cardArray.push(firstCard, secondCard, thirdCard, fourthCard, invisibleCard);
+
 }
 
 function resetData(){
@@ -77,6 +53,24 @@ function resetData(){
     })
 
 }
+function cardNumber(card){
+    console.log("Siamo dentro cardNumber");
+    switch(card.dataset.posizione){
+        case 'first':
+            return 1;
+            break;
+        case 'second':
+            return 2;
+            break;
+        case 'third':
+            return 3;
+            break;
+        case 'fourth':
+            return 4;
+            break;
+    }
+
+}
 function initCardAnimations(){
     colCards.forEach(card => {
         switch(card.dataset.posizione){
@@ -95,3 +89,58 @@ function initCardAnimations(){
         }  
     })
 }
+async function controlCardNumber(posizione){
+    for(let i = 0; i < posizione; i++){
+        cercaCards();
+        activeCard = Array.from(bigCards).find(carde => carde.classList.contains('active'));
+        initCardAnimations();
+        if (activeCard) {
+            activeCard.classList.add('active-to-column');
+        }
+
+        await aspettaAnimazione();
+
+        if (!cardArray[0]) continue;
+        
+
+         
+        bigCards.forEach(bCard =>{
+            if(bCard.dataset.card === cardArray[i].dataset.card){
+                invisibleCard.classList.remove('invisible');
+                invisibleCard.classList.add('fourth');
+                
+                if (activeCard) activeCard.classList.remove('active');
+                bCard.classList.add('active');
+                
+                cardArray[0].classList.remove('first');
+                cardArray[0].classList.add('invisible');
+                
+                if (secondCard) {
+                    secondCard.classList.remove('second');
+                    secondCard.classList.add('first');
+                }
+                if (thirdCard) {
+                    thirdCard.classList.remove('third');
+                    thirdCard.classList.add('second');
+                }
+                if (fourthCard) {
+                    fourthCard.classList.remove('fourth');
+                    fourthCard.classList.add('third');
+                }
+                
+                // Rimuovi le classi di animazione per resettare lo stato visivo
+                firstCard.classList.remove('first-animation-column');
+                secondCard.classList.remove('second-animation-column');
+                thirdCard.classList.remove('third-animation-column');
+                fourthCard.classList.remove('fourth-animation-column');
+                if (activeCard) activeCard.classList.remove('active-to-column');
+
+                // Aggiorna i dataset.posizione per il prossimo scatto
+                resetData();
+            }
+        })
+        
+
+    }
+
+}   
