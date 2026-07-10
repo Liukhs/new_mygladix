@@ -5,8 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/js.js"></script>
+        <script src="js/GSAP/gsap.min.js"></script>
+        <script src="js/GSAP/ScrollTrigger.min.js"></script>
+        <script type="module" src="js/main.js"></script>
         <title>AGENZIA</title>
     </head>
     <body>
@@ -33,197 +39,73 @@
             </div>
         </div>
     </header>
-        <div class="header-height"></div>
-        <section class="sct sct--all sct--background" style="--bg-img: url('/images/nero.png')"></section>
-        <section class="sct sct sct--pd-small sct--js sct--ac">
-            <h1 class="title title--section animation animation--opacity" data-animation="bounce-in-top" data-timing="300" id="title-uno">
-                    Mygladix è il partner digitale che trasforma le idee in realtà.
-            </h1>
-            <div style="text-align: center;">
-                    <p class="subtitle subtitle--section animation animation--opacity" data-animation="slide-in-blurred-left" data-timing="1500" data-after="#title-uno" id="par-uno">
-                        Siamo un agenzia di comunicazione, web marketing & ICT. Dalla pubblicità alla digitalizzazione delle aziende: offriamo soluzioni complete che spaziano dal design creativo alla gestione avanzata delle
-                        tecnologie dell'informazione e della comunicazione(ICT). Il nostro approccio integra strategia, innovazione e competenze digitali per accompagnare le imprese nel loro percorso di crescita e trasformazione digitale
+        <section class="sct sct--row sct--all sct--ae sct--js sct--hero-padding">
+            <div class="flex-paragraph flex-paragraph--partial sct--je sct--ac">
+                <h1 class="title title--hero">TRASFORMIAMO IDEE IN CRESCITA DAL <span class="gradient-text">2014</span></h1>
+            </div>
+            <div class="flex-paragraph flex-paragraph--partial sct--je sct--ae">
+                <div class="text-align__right" style="max-width: 50%;">
+                    <div style="width: 40%; height: 6px; background-color: #a855f7; margin-left: auto; margin-bottom: 10px;"></div>
+                    <p class="subtitle subtitle--hero">Le idee sono facili da avere.</p>
+                    <p class="subtitle subtitle--hero">Trasformarle in risultati è tutta un altra storia.</p>
+                    <br>
+                    <p class="subtitle subtitle--hero">
+                        Dal 2014 Mygladix aiuta aziende e professionisti a comunicare meglio, crescere più velocemente e affrontare il cambiamentocon gli strumenti giusti.
+                        Marketing, comunicazione, tecnologia e innovazione non sono mondi separati: sono parti della stessa strategia.
                     </p>
+                </div>
             </div>
-            <div class="card__big card__big--bg animation--bg-pan-slide">
-                <h1 class="subtitle subtitle--hero">Non siamo solo fornitori di servizi. Siamo alleati strategici</h1>
-                <p class="subtlitle subtitle--section">
-                    Ogni progetto nasce da un idea unica, pensata per valorizzare il potenziale di persone e imprese. Uniamo competenze tecniche, strategiche e creative per offrire soluzioni integrate e personalizzate,
-                    capaci di generare valore reale.
-                </p>
-            </div>
-            <h1 class="title title--section animation animation--opacity" data-animation="bounce-in-top" data-timing="300" id="title-uno">
-                    Il nostro approccio è multidisciplinare e orientato ai risultati
-            </h1>
-            <div style="text-align: center;">
-                    <p class="subtitle subtitle--section animation animation--opacity" data-animation="slide-in-blurred-left" data-timing="1500" data-after="#title-uno" id="par-uno">
-                        Operiamo attraverso Business Unit specializzate che coprono ogni ambito della comunicazione e della tecnologia.
-                    </p>
-            </div>
-
-            <div class="sct sct--ac sct--jc sct--pd">
-                <div class="sct--row sct--jc sct--astr sct--row-wrap">
-                    <div class="card card--topcenter card--design animation animation--opacity card--cfour" data-animation="slide-in-elipptic-bottom"  data-timing="500" style="--card-w: 220px" id="#griglia-uno">
-                        <img src="images/myxdesign-logo-grafica-digitale-tradizionale-mygladix-fotoritocco.webp" alt="">
-                        <p class="title title--card">Creatività che ispira, design che vende</p>
+        </section>
+        <section class="sct sct--ac sct--js sct--pd-section-2_2">
+            <div class="container sct--ac sct--js">
+                <div class="text-align__center">
+                    <h2 class="title title--section">La nostra <span class="gradient-text">Vision</span> e <span class="gradient-text">Mission</span></h2>
+                    <h2 class="title title--section">Dare forma agli obiettivi.</h2>
+                </div>
+                <div class="flex-paragrap flex-paragraph--total sct--as sct--js">
+                    <div class="sct--row sct--ac">
+                        <h3 class="title title--section"><span class="gradient-text">Mission</span></h3> 
+                        <div style="height: 3px; width: 150px; background-color: #fff; margin-top: 15px;"></div>
+                    </div>
+                    <div class="flex-paragraph flex-paragraph--semi sct--as sct--js">
+                        <div class="text-align__left">
+                            <p class="subtitle subtitle--section">
+                            Ogni azienda ha una storia da raccontare, un mercato da conquistare e un potenziale da esprimere.
+                            La nostra missione è aiutare le imprese a trasformare i loro obiettivi e ambizioni in azioni concrete, attraverso strategie efficaci, comunicazione mirata e tecnologie che semplificano la crescita.
+                        </p>
+                        </div>
                         
                     </div>
-                    <div class="card card--topcenter card--learn animation animation--opacity card--cfour" data-animation="slide-in-elipptic-bottom" data-timing="500"  style="--card-w: 220px" id="#griglia-uno">
-                        <img src="images/myxlearn-pcto-stage-scuola-mygladix-imparare-corsi-academy.webp" alt="">
-                        <p class="title title--card">Formazione che ispira, stage che trasformano</p>
-                    </div>
-                    <div class="card card--topcenter card--print animation animation--opacity card--cfour" data-animation="slide-in-elipptic-bottom" data-timing="500"  style="--card-w: 220px" id="#griglia-uno">
-                        <img src="images/myxprint-stampa-biglietti-da-visita-brochure-riviste-volantini-mygladix.webp" alt="" >
-                        <p class="title title--card">Qualità di stampa su misura per te</p>
-                    </div>
-                    <div class="card card--topcenter card--mark animation animation--opacity card--cfour" data-animation="slide-in-elipptic-bottom" data-timing="500"  style="--card-w: 220px" id="#griglia-uno">
-                        <img src="images/myxmark-marketing-seo-digitale-mygladix.webp" alt="" >
-                        <p class="title title--card">Marketing e SEO per il tuo successo</p>
-                    </div>
-                    <div class="card card--topcenter card--social animation animation--opacity card--cfour" data-animation="slide-in-elipptic-bottom" data-timing="1000"  style="--card-w: 220px" id="#griglia-due">
-                        <img src="images/myxsocial-creazione-gestione-social-web-post-reels-x-facebook-instagram-tiktock-linkedin-mygladix.webp" alt="">
-                        <p class="title title--card">Crea e pianifica il tuo successo social</p>
-                    </div>
-                    <div class="card card--topcenter card--tech animation animation--opacity card--cfour" data-animation="slide-in-elipptic-bottom" data-timing="1000"  style="--card-w: 220px" id="#griglia-due">
-                        <img src="images/myxtech-realizzazione-gestione-siti-web-manutenzione-itc-mygladix.webp" alt="">
-                        <p class="title title--card">Soluzioni tecnologiche, creazione e gestione web</p>
-                    </div>
-                    <div class="card card--topcenter card--copy animation animation--opacity card--cfour" data-animation="slide-in-elipptic-bottom" data-timing="1000" style="--card-w: 220px" id="#griglia-due">
-                        <img src="images/myxcopy-copywriter-scittura-vendite-siti-web-riviste-giornali-sponsorizzazioni-pubblicità-social-mygladix.webp" alt="">
-                        <p class="title title--card">Parole che vendono, storie che ispirano</p>
-                    </div>
-                    <div class="card card--topcenter card--press animation animation--opacity card--cfour" data-animation="slide-in-elipptic-bottom" data-timing="1000" style="--card-w: 220px"id="#griglia-due">
-                        <img src="images/myxpress-gestione-comunicazione-stampa-redazione-giornali-riviste-mygladix.webp" alt="">
-                        <p class="title title--card">Affiancamento relazionale</p>
-                    </div>
                 </div>
+                <div class="flex-paragraph flex-paragraph--total sct--as sct--js"></div>
+                <div class="flex-paragraph flex-paragraph--total sct--ae sct--je">
+                    <div class="sct--row sct--ac sct--je">
+                        <div style="height: 3px; width: 150px; background-color: #fff; margin-top: 15px;"></div>
+                        <h3 class="title title--section"><span class="gradient-text">Vision</span></h3> 
+                    </div>
+                    <div class="flex-paragraph flex-paragraph--semi sct--ae sct--je">
+                        <div class="text-align__right">
+                            <p class="subtitle subtitle--section">
+                                Crediamo che le aziende abbiano bisogno di più di un semplice fornitore. Hanno bisogno di qualcuno che ascolti, comprenda le sfide e sappia individuare la strada migliore
+                                per affrontarle. Un punto di riferimento capace di unire visione strategica, creatività e innovazione per accopagnare imprese e professionisti verso nuovi traguardi.
+                            </p>
+                        </div> 
+                    </div>
+                </div>   
             </div>
-            <h1 class="title title--section animation animation--opacity" data-animation="bounce-in-top" data-timing="300" id="title-uno">
-                    Innovazione, sicurezza, visione.
-            </h1>
-            <div style="text-align: center;">
-                    <p class="subtitle subtitle--section animation animation--opacity" data-animation="slide-in-blurred-left" data-timing="1500" data-after="#title-uno" id="par-uno">
-                        Con piattaforme dedicate come Emacat per l'email e SMS marketing, e servizi avanzati SEO, hosting, cybersecurity e registrazione marchi, Mygladix offre tutto cioò che serve per affrontare
-                        le sfide del mercato digitale con successo.
-                    </p>
+        </section>
+        <section class="sct sct--ac sct--js sct--pd-section-2_2">
+            <div class="text-align__center">
+                <h2 class="title title--section">
+                    Il nostro <span class="gradient-text">metodo</span> di lavoro
+                </h2>
             </div>
-            <h1 class="title title--section animation animation--opacity" data-animation="bounce-in-top" data-timing="300" id="title-uno">
-                    I nostri valori
-            </h1>
-            <div class="sct sct--row  sct--astr sct--jc sct--row-wrap sct--pd">
-                <div class="card__reversable card--topcenter card card--cthree" data-animation="slide-in-elipptic-bottom"  data-timing="500" style="--card-w: 220px; max-width: 245px;" id="#griglia-uno">
-                    <div class="card__reversable--card-front card--topcenter">
-                        <img src="/images/Mygladix-professionalita-icon.jpg" alt="">
-                        <p class="title title--card">PROFESSIONALITA</p>    
-                    </div>
-                    <div class="card__reversable--card-back card--topleft">
-                        <p class="subtitle subtitle--card">
-                            Uniamo competenze tecniche, strategiche e creative con la passione di chi ama ciò che fa. Ogni progetto è affrontato con precisione, entusiasmo e dedizione.
-                        </p>
-                    </div>
-                </div>
-                <div class="card__reversable card--topcenter card card--cthree" data-animation="slide-in-elipptic-bottom"  data-timing="500" style="--card-w: 220px; max-width: 245px;" id="#griglia-uno">
-                    <div class="card__reversable--card-front card--topcenter">
-                        <img src="/images/Mygladix-professionalita-icon.jpg" alt="">
-                        <p class="title title--card">RISULTATI</p>    
-                    </div>
-                    <div class="card__reversable--card-back card--topleft">
-                        <p class="subtitle subtitle--card">
-                            Non ci limitiamo a promettere: consegniamo. I risultati sono il nostro miglior biglietto da visita e la conferma è che la direzione è quella giusta.
-                        </p>
-                    </div>
-                </div>
-                <div class="card__reversable card--topcenter card card--cthree" data-animation="slide-in-elipptic-bottom"  data-timing="500" style="--card-w: 220px; max-width: 245px;" id="#griglia-uno">
-                    <div class="card__reversable--card-front card--topcenter">
-                        <img src="/images/Mygladix-professionalita-icon.jpg" alt="">
-                        <p class="title title--card">AUDACIA</p>    
-                    </div>
-                    <div class="card__reversable--card-back card--topleft">
-                        <p class="subtitle subtitle--card">
-                            Osare è nel nostro DNA. Con dati solidi e strategie su misura, affrontiamo le sfide con coraggio e visione, trasformando il rischio in opportuinità
-                        </p>
-                    </div>
-                </div>
-                <div class="card__reversable card--topcenter card card--cthree" data-animation="slide-in-elipptic-bottom"  data-timing="500" style="--card-w: 220px; max-width: 245px;" id="#griglia-uno">
-                    <div class="card__reversable--card-front card--topcenter">
-                        <img src="/images/Mygladix-professionalita-icon.jpg" alt="">
-                        <p class="title title--card">IRRIVERENZA COSTRUTTIVA</p>    
-                    </div>
-                    <div class="card__reversable--card-back card--topleft">
-                        <p class="subtitle subtitle--card">
-                            Sappiamo di essere seri, ma non ci piace essere prevedibili. Pensiamo fuori dagli schemi, perché l'innovazione nasce da un sorriso e da un'idea folle che funziona
-                        </p>
-                    </div>
-                </div>
-                <div class="card__reversable card--topcenter card card--cthree" data-animation="slide-in-elipptic-bottom"  data-timing="500" style="--card-w: 220px; max-width: 245px;" id="#griglia-uno">
-                    <div class="card__reversable--card-front card--topcenter">
-                        <img src="/images/Mygladix-professionalita-icon.jpg" alt="">
-                        <p class="title title--card">INNOVAZIONE</p>    
-                    </div>
-                    <div class="card__reversable--card-back card--topleft">
-                        <p class="subtitle subtitle--card">
-                            Viviamo il cambiamento come una costante. Dall'industria 5.0 all'intelligenza artificiale. Adottiamo tecnologie avanzate per partecipare al futuro e renderlo accessibile
-                        </p>
-                    </div>
-                </div>
-                <div class="card__reversable card--topcenter card card--cthree" data-animation="slide-in-elipptic-bottom"  data-timing="500" style="--card-w: 220px; max-width: 245px;" id="#griglia-uno">
-                    <div class="card__reversable--card-front card--topcenter">
-                        <img src="/images/Mygladix-professionalita-icon.jpg" alt="">
-                        <p class="title title--card">ALLEATI, NON FORNITORI</p>    
-                    </div>
-                    <div class="card__reversable--card-back card--topleft">
-                        <p class="subtitle subtitle--card">
-                            Con Mygladix non acquisti un servizio: costruisci una relazione. Siamo al tuo fianco, passo dopo passo, per valorizzare il tuo potenziale e raggiungere insieme nuovi traguardi
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <h1 class="title title--section animation animation--opacity" data-animation="bounce-in-top" data-timing="300" id="title-uno">
-                    Insieme, moltiplichiamo il valore.
-            </h1>
-            <div style="text-align: center;">
-                <p class="subtitle subtitle--section animation animation--opacity" data-animation="slide-in-blurred-left" data-timing="1500" data-after="#title-uno" id="par-uno">
-                    Quando le competenze si uniscono, i risultati si moltiplicano.
-                </p>
-                <p class="subtitle subtitle--section animation animation--opacity" data-animation="slide-in-blurred-left" data-timing="1500" data-after="#title-uno" id="par-uno">
-                    Mygladix è molto più di un agenzia: è un ecosistema di Business Unit verticali e complementari, ognuna specializzata in un ambito chiave della comunicazione, del marketing e dell'innovazione digitale
-                </p>
-            </div>
-            <div class="sct sct--row  sct--astr sct--jc sct--row-wrap">
-                <div class="card card--topleft card--cthree card--gap card--tech animation animation--opacity" data-animation="slide-in-blurred-bl" data-timing="500" style="--card-w: 300px" >
-                    <div class="card--icon" style="--accent-color: #1A3C6B"><i class="fa-solid fa-globe"></i></div>
-                    <p class="title title--card">
-                        Web Design
-                    </p>
-                    <p class="subtitle subtitle--card">
-                        Progettiamo e realizziamo siti web di alta qualità, con un approccio orientato all'innovazione, all'estetica e alla funzionalità. Ogni progetto è sviluppato con attenzione ai dettagli,
-                        tecnologie all'avanguardia e una visione strategica, per garantire soluzioni digitali efficaci e distintive.
-                    </p>
-                    <button class="btn__large btn--gradient margin__top-auto" style="--accent-gradient: linear-gradient(to bottom, #0f203d, #1A3C6B);">Scopri di più <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-                <div class="card card--topleft card--cthree card--gap card--social animation animation--opacity" data-animation="slide-in-blurred-bottom" data-timing="500" style="--card-w: 300px" >
-                    <div class="card--icon" style="--accent-color: linear-gradient(135deg, #EF83B4 0%, #B13C8C 100%);"><i class="fa-solid fa-globe"></i></div>
-                    <p class="title title--card">
-                        Social Media Strategy
-                    </p>
-                    <p class="subtitle subtitle--card">
-                        Costruiamo strategie vincenti e continuative per dare voce al tuo brand sui social. Gestiamo con cura e creatività profili Facebook, Instagram, Pinterest e altri canali,
-                        valorizzando la tua presenza online.
-                    </p>
-                    <button class="btn__large btn--gradient margin__top-auto" style="--accent-gradient: linear-gradient(135deg, #EF83B4 0%, #B13C8C 100%);">Scopri di più <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-                <div class="card card--topleft card--cthree card--gap card--press animation animation--opacity" data-animation="slide-in-blurred-br" data-timing="500" style="--card-w: 300px" >
-                    <div class="card--icon" style="--accent-color: linear-gradient(135deg, #FEC127 0%, #F38412 100%);"><i class="fa-solid fa-globe"></i></div>
-                    <p class="title title--card">
-                        Organizzazione Eventi
-                    </p>
-                    <p class="subtitle subtitle--card">
-                        Ogni evento è un emozione da vivere e un ricordo da custodire. Con anni di esperienza e una rete di contatti fidati in tutta italia trasformiamo le tue idee in
-                        momenti indimenticabili, curando ogni dettaglio con passione e professionalità. Il miglior risultato, al miglior prezzo, ovunque tu sia
-                    </p>
-                    <button class="btn__large btn--gradient margin__top-auto" style="--accent-gradient: linear-gradient(135deg, #FEC127 0%, #F38412 100%);">Scopri di più <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
+        </section>
+        <section class="sct sct--ac sct--js sct--pd-section-4_3">
+            <h1 class="title title--section font-syfe">ALLE ONDE PENSIAMO NOI.</h1>
+            <h1 class="title title--section font-syfe">GUIDIAMO LA TUA ROTTA.</h1>
+
+            <button class="button-form">Invia messaggio</button>
         </section>
         <footer class="footer">
         <div class="sct footer__row footer__row--pd sct--js sct--as">

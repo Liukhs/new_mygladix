@@ -12,9 +12,7 @@ const aspettaAnimazione = () => new Promise(resolve => setTimeout(resolve, 500))
 export function protegoCarousel(){
 
     colCards.forEach(card => {
-        
         card.addEventListener('click', () => {
-            console.log("Carta cliccata");
             controlCardNumber(cardNumber(card));
         })
     })
@@ -28,8 +26,11 @@ function cercaCards(){
     fourthCard = Array.from(colCards).find(carde => carde.dataset.posizione === 'fourth');
     invisibleCard = Array.from(colCards).find(carde => carde.dataset.posizione === 'invisible');
     cardArray.push(firstCard, secondCard, thirdCard, fourthCard, invisibleCard);
-
+    cardArray.forEach(card =>{
+        console.log(card.dataset.card +" - "+ card.dataset.posizione);
+    })
 }
+
 
 function resetData(){
     colCards.forEach(card => {
@@ -54,7 +55,6 @@ function resetData(){
 
 }
 function cardNumber(card){
-    console.log("Siamo dentro cardNumber");
     switch(card.dataset.posizione){
         case 'first':
             return 1;
@@ -105,7 +105,7 @@ async function controlCardNumber(posizione){
 
          
         bigCards.forEach(bCard =>{
-            if(bCard.dataset.card === cardArray[i].dataset.card){
+            if(bCard.dataset.card === cardArray[0].dataset.card){
                 invisibleCard.classList.remove('invisible');
                 invisibleCard.classList.add('fourth');
                 

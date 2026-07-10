@@ -10,14 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/new_mygladix/css/main.css">
-    <script src="/new_mygladix/js/GSAP/gsap.min.js"></script>
-    <script src="/new_mygladix/js/GSAP/ScrollTrigger.min.js"></script>
-    <script type="module" src="/new_mygladix/js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/GSAP/gsap.min.js"></script>
+    <script src="js/GSAP/ScrollTrigger.min.js"></script>
+    <script type="module" src="js/main.js"></script>
     <title>HOMEPAGE</title>
 </head>
 
-<body class="body-image">
+<body class="body-image overflow__hidden">
     <header class="header header--pre-scroll">
         <div class="sct sct--row sct--jc sct--ac">
             <div class="header--row sct--js">
@@ -72,7 +72,7 @@
         <div class="centered-text">
             <p class="subtitle subtitle--section font-syfe">Il nostro approccio è ispirato agli standard ISO 27001, garantendo tracciabilità totale e governance centralizzata.</p>
         </div>
-        <div class="flex-paragraph flex-paragraph--total flex-paragraph--row card-container sct--ac sct--jc">
+        <div class="flex-paragraph flex-paragraph--total flex-paragraph--row card-container sct--astr sct--jc">
             <div class="card card--cthree card--topcenter purple-hover">
                 <div class="card--icon card--icon--margin"><i class="fa-regular fa-eye"></i></div>
                 <h4 class="title title--card">Osserva</h4>
@@ -103,30 +103,40 @@
         <div class="centered-text">
             <p class="subtitle subtitle--section font-syfe">Scegliere la nostra soluzione significa passare da una gestione passiva a una protezione attiva, completa e strategica</p>
         </div>
-        <div class="sct sct--row sct--ac sct--js" style="max-width: 1400px;">
-            <div style="width: 70%; height: auto; min-height: 500px; position: relative;">
-                <div class="big-card-protego active" data-card="identita">
+        <div class="sct sct--row sct--astr sct--js" style="max-width: 1400px;">
+            <div class="protego-big-card-wrapper">
+                <div class="big-card-protego active" data-card="identita" data-index="0">
                     <h1 class="title title--section">Protezione dell'identità</h1>
                     <p class="subtitle subtitle--section">Difesa proattiva contro spoofing, phishing e tentativi di impersonificazione. Salvaguardiamo il nome del tuo brand e l'integrità dei tuoi asset digitali da qualsiasi attacco esterno</p>
                 </div>
-                <div class="big-card-protego" data-card="deliverability">
+                <div class="big-card-protego" data-card="deliverability" data-index="1">
                     <h1 class="title title--section">Deliverability garantita</h1>
                     <p class="subtitle subtitle--section">Assicuriamo che le tue email arrivino a destinazione senza blocchi o falsi positivi</p>
                 </div>
-                <div class="big-card-protego" data-card="metodo">
+                <div class="big-card-protego" data-card="metodo" data-index="2">
                     <h1 class="title title--section">Metodo certificato</h1>
                     <p class="subtitle subtitle--section">Governance strutturata interamente ispirata ai rigidi standard internazionli ISO 27001</p>
                 </div>
-                <div class="big-card-protego" data-card="evidenze">
+                <div class="big-card-protego" data-card="evidenze" data-index="3">
                     <h1 class="title title--section">Evidenze tecniche</h1>
                     <p class="subtitle subtitle--section">Monitoraggio costante con visibilità totale su record DNS e modifiche strutturali documentate</p>
                 </div>
-                <div class="big-card-protego" data-card="protezione">
+                <div class="big-card-protego" data-card="protezione" data-index="4">
                     <h1 class="title title--section">Protezione attiva</h1>
                     <p class="subtitle subtitle--section">Analisi dei messaggi, blocco e quarantena dei contenuti sospetti, inclusa la protezione avanzata di link e allegati in tempo reale.</p>
                 </div>
             </div>
-            <div style="width: 30%; height: auto; min-height: 500px; position: relative;">
+            <div class="controls-wrapper">
+                <div class="protego-card-controls-wrapper">
+                    <div class="buttons-protego" style="background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px;" data-spostamento="left">
+                        <p> < </p>
+                    </div>
+                    <div class="buttons-protego" style="background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px;" data-spostamento="right">
+                        <p>></p>
+                    </div>
+                </div>
+            </div>
+            <div class="protego-small-card-wrapper">
                 <div class="small-card-protego first" data-card="deliverability" data-posizione="first">
                     <h1 class="protego-card__title">Deliverability garantita</h1>
                 </div>
@@ -173,7 +183,7 @@
         <div class="product-by-pill">Prodotto di Myxtech</div>
         <h1 class="title title--section font-syfe">Il tuo dominio email è già esposto.</h1>
         <h1 class="title title--section text-lblue font-syfe">La differenza è chi lo controlla.</h1>
-        <p class="subtitle subtitle--section font-syfe">Non attendere che la reputazione del tuo dominio sia compromessa.</p>
+        <p class="subtitle subtitle--section font-syfe centered-text">Non attendere che la reputazione del tuo dominio sia compromessa.</p>
         <button class="button-form button-form__accent-blue glow">Contattaci ora <i class="fa-solid fa-arrow-right"></i></button>
     </section>
     <footer class="footer">
