@@ -14,6 +14,10 @@ $mx-pd-section-2_2: 40px;
     --pd-carousel: 80px 10%;
     --pd-section-small: 20px 10%;
     --accent-color: rgba(0, 240, 255, 0.1);
+    --font-menu-small: Max(18px, Min(30px, 1.6vw));
+    --font-menu-heading: Max(25px, Min(40px, 3.0vw));
+    --font-menu-paragraph: Max(14px, Min(16px, 1.11vw));
+    --font-menu-social-paragraph: Max(16px, Min(22px, 1.11vw));
     
 }
 :root{

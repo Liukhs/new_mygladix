@@ -1,7 +1,13 @@
 export function carousel900(){
     const buttons = document.querySelectorAll('.buttons-protego');
     const row = document.querySelector('.protego-big-card-wrapper');
+    if(row === null){
+        return
+    }
     const cards = row.querySelectorAll('.big-card-protego');
+    if(cards.length === 0){
+        return;
+    }
 
     console.log("i bottoni sono: " + buttons.length);
     
