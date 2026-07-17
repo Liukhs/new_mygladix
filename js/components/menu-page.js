@@ -10,6 +10,7 @@ export function gestisciMenu(){
     const pScritta = document.querySelector('.item');
     const pX = document.querySelector('.item-nero');
     const headerButton = document.querySelector('.header__button');
+    const body = document.querySelector('.body');
 
     buttonMenu.addEventListener('click', ()=>{
         if(!menu.classList.contains('active')){
@@ -17,11 +18,13 @@ export function gestisciMenu(){
             button.classList.add('active');
             pScritta.classList.add('p-su');
             pX.classList.remove('p-giu');
+            body.classList.add('no-scroll');
         }else{
             menu.classList.remove('active');
             button.classList.remove('active');
             pScritta.classList.remove('p-su');
             pX.classList.add('p-giu');
+            body.classList.remove('no-scroll');
         }
     })
     summaryButton.addEventListener('click', () =>{
@@ -40,11 +43,13 @@ export function gestisciMenu(){
             button.classList.add('active');
             pScritta.classList.add('p-su');
             pX.classList.remove('p-giu');
+            body.classList.add('no-scroll');
         }else{
             menu.classList.remove('active');
             button.classList.remove('active');
             pScritta.classList.remove('p-su');
             pX.classList.add('p-giu');
+            body.classList.remove('no-scroll');
         }
     })
 }

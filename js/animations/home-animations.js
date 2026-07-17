@@ -21,6 +21,7 @@ export function initHomeAnimations(){
 
     // inizializza gli hover delle news (spostato da main.js)
     initNewsHover();
+    newsAvatar();
 }
 
 export function initNewsHover(){

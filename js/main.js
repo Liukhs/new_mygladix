@@ -33,9 +33,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initArcCarousel();
     initHomeAnimations();
     flashCards();
-    //gestisciMenu();
+    gestisciMenu();
     handleLayoutChange(isMobile);
-    //menu();
+    menu();
     
 
     isMobile.addEventListener('change', handleLayoutChange);
