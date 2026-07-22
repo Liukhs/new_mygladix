@@ -5,7 +5,7 @@ export function menu(){
   const hamburger = document.querySelector('.menu-hamburger');
   const dropdown = document.querySelector('.dropdown');
 
-  console.log(threshold);
+  
 
   window.addEventListener('scroll', ()=>{
     if(scrollY == 0){

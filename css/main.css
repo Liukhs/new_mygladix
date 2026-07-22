@@ -55,6 +55,20 @@ html, body {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("/assets/fonts/Sofia-Pro-Regular-Az.ttf") format("truetype"), url("/assets/fonts/Sofia-Pro-Regular-Az.woff2") format("woff2"), url("/assets/fonts/Sofia-Pro-Regular-Az.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("/assets/fonts/Sofia-Pro-Bold-Az.woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 p {
   margin: 0;
   padding: 0;
@@ -462,18 +476,71 @@ p {
   justify-content: center;
   border-radius: 30px;
   background-color: rgba(12, 12, 12, 0.25);
-  border: 1px solid #00f0ff;
+  border: 1px solid;
   width: -moz-fit-content;
   width: fit-content;
   padding: 10px 16px;
   margin-bottom: 20px;
-  color: #00f0ff;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
+.categories-pill__marketing {
+  color: #e11d48;
+  border-color: #e11d48;
+  --color-pill: #e11d48;
+}
+.categories-pill__marketing.active {
+  color: #000;
+  background-color: var(--color-pill);
+}
+.categories-pill__seo {
+  color: #16a34a;
+  border-color: #16a34a;
+  --color-pill: #16a34a;
+}
+.categories-pill__seo.active {
+  color: #000;
+  background-color: var(--color-pill);
+}
+.categories-pill__tech {
+  color: #1d4ed8;
+  border-color: #1d4ed8;
+  --color-pill: #1d4ed8;
+}
+.categories-pill__tech.active {
+  color: #000;
+  background-color: var(--color-pill);
+}
+.categories-pill__social {
+  color: #06b6d4;
+  border-color: #06b6d4;
+  --color-pill: #06b6d4;
+}
+.categories-pill__social.active {
+  color: #000;
+  background-color: var(--color-pill);
+}
+.categories-pill__grafica {
+  color: #a855f7;
+  border-color: #a855f7;
+  --color-pill: #a855f7;
+}
+.categories-pill__grafica.active {
+  color: #000;
+  background-color: var(--color-pill);
+}
+.categories-pill__novita {
+  color: #f59e0b;
+  border-color: #f59e0b;
+  --color-pill: #f59e0b;
+}
+.categories-pill__novita.active {
+  color: #000;
+  background-color: var(--color-pill);
+}
 
 .categories-pill:hover {
-  background-color: #00f0ff;
+  background-color: var(--color-pill);
   transform: translateY(-8px);
   color: #000;
 }
@@ -2140,6 +2207,10 @@ p {
     grid-auto-flow: row;
   }
 }
+.blog-grid__full-layout {
+  grid-auto-flow: row dense !important;
+  grid-auto-rows: 100px;
+}
 
 .bento-cell {
   background: rgba(13, 11, 24, 0.45);
@@ -2168,11 +2239,12 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.03);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: flex-start;
+  justify-content: flex-start;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 30px;
 }
 @media (max-width: 768px) {
   .blog-cell {
@@ -2184,7 +2256,7 @@ p {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: var(--bg-image);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgb(0, 0, 0)), var(--bg-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2193,6 +2265,43 @@ p {
 }
 .blog-cell:hover::before {
   filter: grayscale(0);
+}
+.blog-cell__data {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 6px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+}
+.blog-cell .author-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+.blog-cell .author-wrapper .author--avatar {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  position: relative;
+}
+.blog-cell .author-wrapper .author--avatar::before {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--avatar-content), linear-gradient(rgb(150, 150, 150), rgb(150, 150, 150));
+  background-position: center;
+  content: " ";
+  font-size: 8px;
+  color: #fff;
+  font-weight: 800;
 }
 .blog-cell__information {
   display: flex;
@@ -2204,29 +2313,29 @@ p {
   color: #fff;
   z-index: 1;
 }
+.blog-cell__information.no-pd {
+  padding: 0 !important;
+}
 .blog-cell__information--grafica {
-  background-color: #a855f7;
   --color-accent: #a855f7;
 }
 .blog-cell__information--tech {
-  background-color: #1d4ed8;
   --color-accent: #1d4ed8;
 }
 .blog-cell__information--novita {
-  background-color: #f59e0b;
   --color-accent: #f59e0b;
 }
 .blog-cell__information--seo {
-  background-color: #16a34a;
   --color-accent: #16a34a;
 }
 .blog-cell__information--social {
-  background-color: #06b6d4;
   --color-accent: #06b6d4;
 }
 .blog-cell__information--marketing {
-  background-color: #e11d48;
   --color-accent: #e11d48;
+}
+.blog-cell__information.margin {
+  margin-top: auto !important;
 }
 .blog-cell__information--row {
   flex-direction: row !important;
@@ -2239,9 +2348,9 @@ p {
   letter-spacing: 2px;
   margin: 0;
   font-weight: 700;
+  margin: 0;
   margin-bottom: 0.8rem;
-  min-width: 170px;
-  max-width: 270px;
+  max-width: 100%;
 }
 .blog-cell__information .blog-button {
   color: var(--color-accent);

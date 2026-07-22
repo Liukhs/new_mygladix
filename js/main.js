@@ -8,6 +8,7 @@ import { menu } from "./components/menu-scroll.js"
 import { importaMenu } from "./components/menu-fetch.js";
 import { loader } from "./components/loader-animation.js";
 import { seedSummary } from "./components/summary-seed.js";
+import { fullBlog } from "./components/blog.js";
 
 const isMobile = window.matchMedia('(max-width: 900px)'); //Metodo per controllare la larghezza dello schermo in JS
 
@@ -33,9 +34,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initArcCarousel();
     initHomeAnimations();
     flashCards();
-    gestisciMenu();
     handleLayoutChange(isMobile);
-    menu();
+    fullBlog();
     
 
     isMobile.addEventListener('change', handleLayoutChange);

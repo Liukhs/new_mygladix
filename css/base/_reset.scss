@@ -10,7 +10,6 @@ html, body{
     background-color: #04010d;
     color: #fff;
     overflow-x: hidden;
-    
 }
 
 *, *::before, *::after{
@@ -27,6 +26,23 @@ html, body{
     font-style: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: 'Sofia Pro';
+    src:url('/assets/fonts/Sofia-Pro-Regular-Az.ttf') format('truetype'),
+        url('/assets/fonts/Sofia-Pro-Regular-Az.woff2') format("woff2"),
+        url('/assets/fonts/Sofia-Pro-Regular-Az.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Sofia Pro';
+    src: url("/assets/fonts/Sofia-Pro-Bold-Az.woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 p{
     margin: 0;
     padding: 0;

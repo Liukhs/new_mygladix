@@ -8,8 +8,6 @@ let sezioni = gsap.utils.toArray("#sezione");
 
 export function initHomeAnimations(){
 
-    console.log(sezioni.length)
-
     gTlAnim(sezioni);
     
     
@@ -21,7 +19,6 @@ export function initHomeAnimations(){
 
     // inizializza gli hover delle news (spostato da main.js)
     initNewsHover();
-    newsAvatar();
 }
 
 export function initNewsHover(){

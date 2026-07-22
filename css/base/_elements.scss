@@ -396,19 +396,73 @@ $color-variants:(
     justify-content: center;
     border-radius: 30px;
     background-color: rgba(12, 12, 12, 0.25); 
-    border: 1px solid $mx-accent-lightblue; 
+    border: 1px solid;
     width: fit-content; 
     padding: 10px 16px; 
     margin-bottom: 20px;
-    color: $mx-accent-lightblue;
     cursor: pointer;
     
     transition: transform .3s ease,
                 background-color .3s ease,
                 color .3s ease;
+    &__marketing{
+        color: #e11d48;
+        border-color: #e11d48;
+        --color-pill: #e11d48;
+        &.active{
+            color: #000;
+            background-color: var(--color-pill);
+        }
+    }
+    &__seo{
+        color: #16a34a;
+        border-color: #16a34a;
+        --color-pill: #16a34a;
+        &.active{
+            color: #000;
+            background-color: var(--color-pill);
+        }
+    }
+    &__tech{
+        color: #1d4ed8;
+        border-color: #1d4ed8;
+        --color-pill: #1d4ed8;
+        &.active{
+            color: #000;
+            background-color: var(--color-pill);
+        }
+    }
+    &__social{
+        color: #06b6d4;
+        border-color: #06b6d4;
+        --color-pill: #06b6d4;
+        &.active{
+            color: #000;
+            background-color: var(--color-pill);
+        }
+    }
+    &__grafica{
+        color: #a855f7;
+        border-color: #a855f7;
+        --color-pill: #a855f7;
+        &.active{
+            color: #000;
+            background-color: var(--color-pill);
+        }
+    }
+    &__novita{
+        color: #f59e0b;
+        border-color: #f59e0b;
+        --color-pill: #f59e0b;
+        &.active{
+            color: #000;
+            background-color: var(--color-pill);
+        }
+    }
+
 }
 .categories-pill:hover{
-    background-color: $mx-accent-lightblue;
+    background-color: var(--color-pill);
     transform: translateY(-8px);
     color: #000;
 }

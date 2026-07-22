@@ -4,13 +4,27 @@ export function gestisciMenu(){
     const summaryButton = document.querySelector('.right-wing');
     const summaryUl = document.querySelector('.ul-summary');
     const summary = document.querySelector('.page-summary');
-    const buttonMenu = document.querySelector('.menu-hamburger__placeholder');
+    const buttonMenu = document.querySelector('.menu-hamburger__placeholder'); //placeholder per i confini del bottone che attiva il menu
     const button = document.querySelector('.menu-hamburger');
-    const closeMenu = document.querySelector('.close-x');
     const pScritta = document.querySelector('.item');
     const pX = document.querySelector('.item-nero');
     const headerButton = document.querySelector('.header__button');
-    const body = document.querySelector('.body');
+    const body = document.body;
+
+    if (!menu || !summaryButton || !summaryUl || !summary || !buttonMenu || !button || !pScritta || !pX || !headerButton) {
+        console.error('gestisciMenu: elementi menu mancanti nel DOM', {
+            menu,
+            summaryButton,
+            summaryUl,
+            summary,
+            buttonMenu,
+            button,
+            pScritta,
+            pX,
+            headerButton,
+        });
+        return;
+    }
 
     buttonMenu.addEventListener('click', ()=>{
         if(!menu.classList.contains('active')){
@@ -53,3 +67,7 @@ export function gestisciMenu(){
         }
     })
 }
+/*
+Tutti i classList.add/remove andrebbero messi insieme in una funzione esterna e poi richiamati ma è lo stesso, si farà
+
+*/

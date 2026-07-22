@@ -55,13 +55,14 @@ export function multiScrollPage(trigger, elemento, x, stagger){
 export function gTlAnim(array){
   array.forEach((sezione) =>{
     const elementiAnimabili = sezione.querySelectorAll(`${sezione.dataset.names}`);
+    removeTransition(elementiAnimabili);
 
     gsap.from(elementiAnimabili, {
       scrollTrigger: {
         trigger: sezione,
         start: "top center",
         end: "bottom top",
-        markers: false,
+        markers: true,
         toggleActions: "play reset play reset"
       },
       opacity: 0,
@@ -75,5 +76,11 @@ export function gTlAnim(array){
         return target.dataset.anim === "y" ? (Number(target.dataset.val) || 0) : 0;
       }
     })
+  })
+}
+
+function removeTransition(array){
+  array.forEach(el =>{
+    el.style.transition = "none";
   })
 }
